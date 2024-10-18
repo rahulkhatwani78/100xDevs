@@ -1,0 +1,80 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #9ba3b4;
+}
+
+header {
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  padding-right: 10px;
+}
+
+.topLink {
+  color: #9ba3b4;
+  cursor: pointer;
+  padding-left: 16px;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.topLink:hover {
+  color: white;
+}
+
+.headerSearchInput {
+  padding: 5px 30px 5px 10px;
+  background-color: #0e0e0e;
+  border: 0.1px solid #9ba3b4;
+  color: #9ba3b4;
+}
+
+.headerDownloadBtn {
+  margin-left: 5px;
+  padding: 6px 17px;
+  background-color: #0078d4;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+}
+
+.messageContent {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.mainContent {
+    margin-left: 550px;
+    margin-right: 550px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.bodyBtn {
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  justify-content: space-between;
+  border: none;
+  border-radius: 4px;
+}
