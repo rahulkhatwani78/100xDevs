@@ -1,0 +1,64 @@
+* {
+    font-family: "Inter",serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin-left: 360px;
+    margin-right: 360px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink {
+    color: #666;
+    padding: 20px;
+    font-size: 13px;
+}
+
+.navLink:hover {
+    color: #387ed1;
+    cursor: pointer;
+}
+
+.stickyBorder {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+main {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.themeColor {
+    color: #424242;
+}
+
+.detailsHeading {
+    margin-top: 45px;
+    font-size: 40px;
+    font-weight: 450;
+}
+
+.detailsDescription {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+button {
+    background-color: #387ed1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
