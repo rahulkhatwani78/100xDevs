@@ -1,0 +1,57 @@
+1) pwd - Gives path of the current working directory.
+2) cd - To change the directory
+3) ls - To list all the files and folders in the current directory we are in.
+   (a) -l - This option lists the property of each file/folder in the directory such as permissions, references, author, group, size in bytes, last modified date and time and the file name
+      eg.) -rw-r--r-- 1 Rahul.Khatwani 197121 1973 Nov  7 17:40 bash-commands.txt
+      There are 3 sets of permission and each set can have r (read), w (write) or x (execute) or combinations of all permissions -> user, group and others. In above example the user has read and write permissions and group and others have the read permission.
+   (b) -R - This option lists all the files/folders with their sub files and sub folders recursively
+   (c) -t - Lists all the files/folders in the last modified order
+   (d) -a - Lists all the hidden files/folder
+   (e) -r - Lists all the files/folder in the reverse order
+   (f) -s - Size of each file/folder
+   (g) ls -lR | grep .txt - To list all the txt files recursively
+   (h) ls *.txt - To list out all the txt files in the current directory
+4) mkdir - To create a folder/directory
+   (a) -p - To create the directory recursively
+   mkdir -p frontend/scripts
+   mkdir -p frontend/css
+5) touch - To create a file in the current directory
+6) cat - To view/concatenate the content of a file
+   (a) - cat > file.txt - This command allows you to override the content of a particular file
+   (b) - cat >> file.txt - This command allows you to append the content to the file
+7) vi - Opens a file in Vim editor to edit the file
+   (a) Press 'i' to enter in the Insert mode
+   (b) Press Esc to move out from Insert mode
+   (c) Type ':q!' to quit the Vim editor.
+   (d) Type ':wq!' to save the file and then quit the editor.
+8) mv - Moves the file/folder from source to destination
+   mv source destination
+   (a) This can also rename a file when command used as mv fil.txt file.txt
+9) cp - Copies the file/folder from source to destination
+   (a) Remember, for folder we will have to use the -r flag which represents the recursive copy
+   cp -r source destination
+10) clear - To clear the console
+11) rm - To remove a file/folder
+   (a) -r To remove a folder
+12) chmod - To change the permissions of a file/folder
+   This has 2 parameters first is the user (u - user, g - group or o - other) for which the permission are to be modified - or + means if we are adding or removing any permission and the permissions (r/4 - read, w/2 - write or x/1 - execute) and second is the file/folder name. Also, you will need to add -R for changing the folder permissions.
+   eg.) chmod u-w -R test - Here we are removing the write permission from the user from test folder
+   eg.) chmod 764 bash-commands.txt - Here we are adding the execute permission to the user and write permission to the group for bash-commands.txt file
+        The first 7 represents the r+w+x = 4+2+1 = 7 for user
+        The second 6 represents the r+w = 4+2 = 6 for group
+        The last 4 represents the r = 4 for others
+13) echo - To print something in the terminal
+   eg.) echo 'Hello World' - Prints Hello World onto the terminal
+   eg.) echo $PATH - Prints the environment variable PATH's value
+14) head - To get the first n rows of the file
+   eg.) head bash-commands.txt - Returns the first 10 rows of a file
+   eg.) head -20 bash-commands.txt - Returns the first 20 rows of a file
+15) tail - To get the last n rows of the file
+   eg.) tail bash-commands.txt - Returns the last 10 rows of a file
+   eg.) tail -20 bash-commands.txt - Returns the last 20 rows of a file
+16) && - This operator is used to run two commands one after another
+   eg.) mkdir test1 && cd test1 - This command creates a folder named test1 and changes the directory to that folder
+17) | - This operator lets us use the output of the first command as an input for next command
+   eg.) tail -n +25 bash-commands.txt | head -n +5 - Prints the lines from row 25 to 29
+18) wc - This command returns the number of lines, words and characters in a particular file
+19) node - Opens a node shell (We can write javascript in it without opening the browser)
