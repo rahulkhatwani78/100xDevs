@@ -1,0 +1,11 @@
+Timestamp	Category	Message
+08/11/2024;09:14	INFO	User Logged In
+08/11/2024;09:15	CRITICAL	Error fetching the username
+08/11/2024;09:16	INFO	User searched for "Apple Pie"
+08/11/2024;09:16	EXCEPTION	Exception fetching the description for "Apple Pie"
+08/11/2024;09:17	INFO	User searched for "Banana"
+08/11/2024;09:18	INFO	User added "Banana" in the cart
+08/11/2024;09:20	INFO	User completed the payment
+08/11/2024;09:21	CRITICAL	Error occured while downloading the receipt
+08/11/2024;09:22	INFO	User Logged Out
+08/11/2024;09:23	INFO	Server Idle

@@ -54,4 +54,32 @@
 17) | - This operator lets us use the output of the first command as an input for next command
    eg.) tail -n +25 bash-commands.txt | head -n +5 - Prints the lines from row 25 to 29
 18) wc - This command returns the number of lines, words and characters in a particular file
-19) node - Opens a node shell (We can write javascript in it without opening the browser)
+19) grep - To find a particular occurence of a word in your file
+   (a) grep "eg." bash-commands.txt - This will return all the lines having "eg." word in it.
+   (b) grep "eg." bash-commands | wc - This will return the number of occurences of the word "eg." in the file.
+   (c) grep -c "eg." bash-commands.txt - This will return the number of lines in which this word exists.
+   (d) grep -h "eg." bash-commands.txt - This will return all the lines having the word.
+   (e) grep -hi "eg." bash-commands.txt - This will return all the lines having the word without considering the case (Upper/Lower).
+   (f) grep -hir "eg" test - To return all the occurences from the given folder
+   (g) grep -hin "eg" bash-commands.txt - This will return all the lines having the word with the line number.
+   (h) grep -w "eg" bash-commands.txt - This will return all the lines having the exact match of the word.
+   (i) grep -v "INFO" logs.txt - This will return all the lines without "INFO" in them.
+   (j) grep -A 5 "EXCEPTION" logs.txt - This will return 5 lines after the occured word.
+   (k) grep -B 5 "EXCEPTION" logs.txt - This will return 5 lines before the occured word.
+   (l) grep -C 5 "EXCEPTION" logs.txt - This will return 5 lines before and 5 lines after the occured word.
+20) history - To view the history of all the commands ran.
+21) sed - To print the modified contents of the file.
+   (a) sed -n '/ERROR/ p' logs.txt - This will work same as grep command and will print all the lines having "ERROR" word in it.
+   (b) sed 's/ERROR/CRITICAL/' logs.txt - This command is called substitute command, this will replace all the occurences of "ERROR" with "CRITICAL" and print it, but will not modify the actual file content.
+   (c) sed -ibackup 's/ERROR/CRITICAL/' logs.txt - This command will create a backup of the original file and make changes in the original files with the provided substitute.
+   (d) sed '3 s/CRITICAL/ERROR/' logs.txt - This will only replace the substitute for the provided line number, here it is line number 3 (this is not the total number lines, but line number)
+   (e) sed '1,5 s/CRITICAL/ERROR/' logs.txt - This will only replace the substitute for the provided range of line number, here it is line number 1 to 5
+22) awk - This is itself a scripting language but is the most powerful text processing tool.
+   (a) awk '/CRITICAL/{print $0}' logs.txt - This will work same as grep command and will print all the lines having "CRITICAL" word in it.
+   (b) awk '{gsub("ERROR", "CRITICAL")}{print}' logs.txt - This will work same as sed substitute command and will print the substitute values.
+   (c) awk 'BEGIN {print "LOG SUMMARY\n--------------"} {print} END {print "--------------\nEND OF LOG SUMMARY"}' logs.txt
+   (d) awk '{print $1, $2}' logs.txt - Prints the 1st and 2nd column of the file.
+   (e) awk -F "," '{print $1, $2}' logs.txt - By default the delimeter is space, so to use custom delimeter -F is used with specified delimeter.
+   (f) awk '{count[$2]++} END {print count["CRITICAL"]}' logs.txt - To print the count of CRITICAL keyword present in the $2 (2nd column)
+   (g) awk '{ if ($1 > "08/11/2024;09:15") {print $0}}' logs.txt - To print the logs which have timestamp after 08/11/2024;09:15
+23) node - Opens a node shell (We can write javascript in it without opening the browser)
