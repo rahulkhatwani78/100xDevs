@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <ol id="todos">
+      <li id="todo-1">
+        <span>Take Class</span> <button onclick="editTodo(1)">Edit</button>
+        <button onclick="deleteTodo(1)">Delete</button>
+      </li>
+      <li id="todo-2">
+        <span>Go out for dinner</span>
+        <button onclick="editTodo(2)">Edit</button>
+        <button onclick="deleteTodo(2)">Delete</button>
+      </li>
+      <li id="todo-3">
+        <span></span> <button onclick="editTodo(3)">Edit</button>
+        <button onclick="deleteTodo(3)">Delete</button>
+      </li>
+    </ol>
+    <div>
+      <input type="text" id="todo" />
+      <button id="addTodo" onclick="addTodo()">Add Todo</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
