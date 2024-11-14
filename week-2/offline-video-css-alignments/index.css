@@ -1,0 +1,15 @@
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.leftDiv {
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.rightDiv {
+    background-color: red;
+    flex-grow: 2;
+}
