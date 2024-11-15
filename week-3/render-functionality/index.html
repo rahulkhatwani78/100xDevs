@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render</title>
+</head>
+<body>
+    <input type="text" />
+    <button onclick="addTodo()" id="addTodo">Add Todo</button>
+    <ol id="todos"></ol>
+    <script>
+        // State
+        let todos = [];
+        if (localStorage.getItem('todos')) {
+            todos = localStorage.getItem('todos').split(',');
+        }
+
+        // Component same as React Component
+        const todoComponent = (todo, index) => {
+            const newTodoElement = document.createElement('li');
+            newTodoElement.setAttribute("id", "todo-" + index);
+            
+            const spanElement = document.createElement('span');
+            spanElement.innerHTML = todo;
+
+            const space1Element = document.createElement('span');
+            space1Element.innerHTML = ' ';
+
+            const editButton = document.createElement('button');
+            editButton.innerHTML = 'Edit';
+            editButton.setAttribute("onclick", `editTodo(${index})`);
+
+            const space2Element = document.createElement('span');
+            space2Element.innerHTML = ' ';
+
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'Delete';
+            deleteButton.setAttribute("onclick", `deleteTodo(${index})`);
+
+            newTodoElement.appendChild(spanElement);
+            newTodoElement.appendChild(space1Element);
+            newTodoElement.appendChild(editButton);
+            newTodoElement.appendChild(space2Element);
+            newTodoElement.appendChild(deleteButton);
+
+            return newTodoElement;
+        }
+
+        // To seperate the DOM manipulation in different function - Similar to React
+        const render = () => {
+            localStorage.setItem('todos', todos);
+            const todosElement = document.querySelector('#todos');
+            todosElement.innerHTML = '';
+            todos.forEach((todo, index) => {
+                const newTodoElement = todoComponent(todo, index);
+                todosElement.appendChild(newTodoElement);
+            })
+        }
+
+        const addTodo = () => {
+            const newTodo = document.querySelector('input').value;
+            if (!newTodo) {
+                return;
+            }
+            todos.push(newTodo);
+            render();
+        }
+
+        const deleteTodo = (index) => {
+            todos.splice(index, 1);
+            render();
+        }
+
+        const updateTodo = (index) => {
+            const newTodo = document.querySelector("input").value;
+            todos[index] = newTodo;
+            document.querySelector("#addTodo").innerHTML = "Add Todo";
+            document.querySelector("#addTodo").onclick = () => {
+                addTodo();
+            };
+            render();
+            emptyInput();
+        };
+
+        const editTodo = (index) => {
+            const todoToEdit = todos[index];
+            document.querySelector("input").value = todoToEdit;
+            document.querySelector("#addTodo").innerHTML = "Update Todo";
+            document.querySelector("#addTodo").onclick = () => {
+                updateTodo(index);
+            };
+        };
+
+        render();
+    </script>
+</body>
+</html>

@@ -22,7 +22,30 @@ const addTodo = () => {
   }
   const newTodoElement = document.createElement("li");
   newTodoElement.setAttribute("id", "todo-" + counter);
-  newTodoElement.innerHTML = `<span>${newTodoValue}</span> <button onclick="editTodo(${counter})">Edit</button> <button onclick="deleteTodo(${counter})">Delete</button>`;
+
+  const spanElement = document.createElement('span');
+  spanElement.innerHTML = newTodoValue;
+
+  const space1Element = document.createElement('span');
+  space1Element.innerHTML = ' ';
+
+  const editButton = document.createElement('button');
+  editButton.innerHTML = 'Edit';
+  editButton.setAttribute("onclick", `editTodo(${counter})`);
+
+  const space2Element = document.createElement('span');
+  space2Element.innerHTML = ' ';
+
+  const deleteButton = document.createElement('button');
+  deleteButton.innerHTML = 'Delete';
+  deleteButton.setAttribute("onclick", `deleteTodo(${counter})`);
+
+  newTodoElement.appendChild(spanElement);
+  newTodoElement.appendChild(space1Element);
+  newTodoElement.appendChild(editButton);
+  newTodoElement.appendChild(space2Element);
+  newTodoElement.appendChild(deleteButton);
+
   document.querySelector("#todos").appendChild(newTodoElement);
   counter += 1;
   emptyInput();
@@ -30,7 +53,6 @@ const addTodo = () => {
 
 const deleteTodo = (index) => {
   const todoToDelete = document.getElementById("todo-" + index);
-  // todoToDelete.parentNode.removeChild(todoToDelete); // Delete using parentNode
   document.getElementById("todos").removeChild(todoToDelete);
 };
 
