@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  text-align: center;
+  padding-top: 50px;
+  height: 100vh;
+}
+
+#colorPickerSpan {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.colorPalette {
+  margin: 15px 150px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0.5px 0.5px black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.color {
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#colorPicker {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .colorPalette {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .colorPalette {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .colorPalette {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .colorPalette {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .colorPalette {
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 75px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .colorPalette {
+    grid-template-columns: 1fr;
+    margin: 10px 50px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .colorPalette {
+    grid-template-columns: 1fr;
+    margin: 10px 10px;
+  }
+}
