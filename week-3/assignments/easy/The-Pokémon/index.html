@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Pokémon</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>The Pokémon</h1>
+      <div>
+        Enter the number of Pokémon cards you need
+        <input
+          type="number"
+          id="numberOfCards"
+          placeholder="Number of Cards"
+          value="1"
+        />
+      </div>
+      <br />
+      <br />
+      <div>
+        Enter <input type="text" id="pokemonName" placeholder="Pokémon Name" />
+        or Select
+        <select id="pokemonList"></select>
+        the Pokémon name
+      </div>
+      <br />
+      <br />
+      <button onclick="getPokemonInfo()" id="getCards">Get Cards</button>
+      <button onclick="renderCards(pokemonMaster, true)" id="getAllPokemons">
+        Get All Pokémons
+      </button>
+      <div id="error"></div>
+    </div>
+    <div id="pokemonCards"></div>
+  </body>
+</html>
