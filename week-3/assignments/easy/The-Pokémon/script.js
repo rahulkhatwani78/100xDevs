@@ -127,7 +127,7 @@ const getPokemonInfo = async () => {
   const pokemonSelected = document.querySelector("#pokemonList").value;
   if (pokemonName && pokemonSelected && pokemonSelected !== "-1") {
     document.querySelector("#error").innerHTML =
-      "Please either enter the Pokémon name or select it, don't do the both!";
+      "Please either enter the Pokémon name or select it, don't do both!";
     document.querySelector("#pokemonCards").innerHTML = "";
     return;
   }
@@ -138,7 +138,7 @@ const getPokemonInfo = async () => {
   const response = await fetch(urlForSelectedPokemon);
   if (!response.ok) {
     document.querySelector("#error").innerHTML =
-      "Please enter/select the correct Pokemon name";
+      "Please enter/select the correct Pokémon name";
     document.querySelector("#pokemonCards").innerHTML = "";
     return;
   }
