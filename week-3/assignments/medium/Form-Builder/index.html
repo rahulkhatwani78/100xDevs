@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="formBuilder">
+        <h1>Form Builder</h1>
+        <div id="selectField">
+          <h2>Select Field Type</h2>
+          <select id="fieldType" onchange="onFieldTypeChange()">
+            <option value="-1">-- Select --</option>
+            <option value="heading">Heading</option>
+            <option value="textInput">Text Input</option>
+            <option value="passwordInput">Password Input</option>
+            <option value="selectInput">Select Input</option>
+            <option value="checkboxInput">Checkbox Input</option>
+            <option value="radioInput">Radio Input</option>
+          </select>
+          <span id="selectFieldError"></span>
+        </div>
+        <div id="fieldLabels"></div>
+        <div id="fieldOptions"></div>
+        <div id="error"></div>
+        <div id="addField">
+          <button onclick="addField()">Add Field</button>
+        </div>
+      </div>
+      <div class="verticalLine"></div>
+      <div class="previewArea">
+        <h1>Form Preview</h1>
+        <div class="formPreview"></div>
+        <div id="previewAreaError"></div>
+        <div id="formSubmitted"></div>
+        <div id="submitForm">
+          <button onclick="submitForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

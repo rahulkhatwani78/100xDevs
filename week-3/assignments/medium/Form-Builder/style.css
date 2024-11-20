@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background-color: beige;
+  display: grid;
+  grid-template-columns: 1fr 0.001fr 1fr;
+  height: 100vh;
+}
+
+.formBuilder,
+.previewArea {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.formBuilder * {
+  margin-top: 15px;
+}
+
+.previewArea * {
+  margin-top: 15px;
+}
+
+.formPreviewElement {
+  margin-top: 10px;
+}
+
+#fieldLabel {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+#addOptionLabel,
+#removeOptionLabel {
+  margin-left: 5px;
+}
+
+#error,
+#previewAreaError {
+  color: red;
+  margin-top: 20px;
+}
+
+#formSubmitted {
+  color: green;
+  margin-top: 20px;
+}
+
+#addField,
+#submitForm {
+  margin-top: 10px;
+}
+
+select,
+input,
+button {
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.verticalLine {
+  width: 1px;
+  background-color: black;
+}
+
+.previewArea input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.previewArea select {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+label {
+  margin-right: 5px;
+}
