@@ -1,0 +1,18 @@
+{
+  "name": "js-intro",
+  "version": "1.0.0",
+  "description": "Every browser has their own JS engine, which compiles and runs the JS on browsers\r Chrome has V8 engine.\r Mozilla has SpiderMonkey\r Safari has JavaScriptCore",
+  "main": "index.js",
+  "scripts": {
+    "startChalk": "node index.mjs",
+    "start2": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0"
+  }
+}
