@@ -1,1 +1,1 @@
-[{"id":1,"todo":"Hello"},{"id":2,"todo":"Bye"}]
+[{"id":1,"todo":"Hello","completed":true},{"id":2,"todo":"Bye","completed":false}]
