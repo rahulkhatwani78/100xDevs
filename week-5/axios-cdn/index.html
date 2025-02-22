@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="apiResponse"></div>
+    <script>
+        const apiCallUsingAxios = async () => {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
+            const apiResposneDiv = document.getElementById('apiResponse');
+            apiResposneDiv.innerHTML = '<b style="font-size: 25px">' + response?.data?.title + '</b><br><br>';
+            apiResposneDiv.innerHTML += response?.data?.body;
+        }
+        apiCallUsingAxios();
+    </script>
+</body>
+</html>
